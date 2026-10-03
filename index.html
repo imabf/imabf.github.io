@@ -1,0 +1,532 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Ahmad Almashhadani: Computer Science graduate and software developer in Doha, Qatar. Back-end and LLM systems.">
+<meta property="og:title" content="Ahmad Almashhadani">
+<meta property="og:description" content="Software developer in Doha, Qatar. Back-end and LLM systems.">
+<meta property="og:url" content="https://imabf.com/">
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>Ahmad Almashhadani</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600&family=Manrope:wght@400..700&family=Saira+Extra+Condensed:wght@600;800&display=swap">
+<style>
+/* Layout concept: one dark world. Night-black ground, a cold violet-to-ice aura rising behind a towering
+   condensed name, blade-cut panels. Single theme by choice. Big readable body text, short blocks. */
+:root{
+  --bg:#06070c; --bg-2:#0b0d16; --panel:#0e111c; --panel-2:#131728;
+  --line:rgba(150,160,255,.20); --line-soft:rgba(220,225,255,.08);
+  --fg:#f2f4fc; --fg-2:#c3c8dc; --muted:#8f95b0;
+  --violet:#8b6cff; --ice:#62d6ff; --violet-dim:rgba(139,108,255,.16); --ice-dim:rgba(98,214,255,.12);
+  --grad:linear-gradient(100deg,var(--violet),var(--ice));
+  --display:'Saira Extra Condensed','Impact','Haettenschweiler','Arial Narrow',sans-serif;
+  --ui:'Chakra Petch','Trebuchet MS',ui-monospace,sans-serif;
+  --body:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
+  --cut:18px;
+  color-scheme:dark;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--fg);font:400 18px/1.65 var(--body);padding-inline:clamp(16px,5vw,56px);-webkit-font-smoothing:antialiased;overflow-x:hidden;position:relative}
+a{color:inherit}
+p{margin:0}
+h1,h2,h3,h4{margin:0;text-wrap:balance}
+:focus-visible{outline:2px solid var(--ice);outline-offset:3px}
+.wrap{max-width:1140px;margin-inline:auto}
+section{padding-block:clamp(64px,9vw,120px)}
+.ui{font-family:var(--ui);font-size:.8rem;font-weight:500;letter-spacing:.2em;text-transform:uppercase}
+.label{display:flex;align-items:center;gap:12px;color:var(--ice);margin-bottom:16px}
+.label::before{content:"";width:9px;height:9px;background:var(--grad);transform:rotate(45deg);box-shadow:0 0 14px var(--violet)}
+h2{font:800 clamp(3rem,8.5vw,6rem)/.9 var(--display);text-transform:uppercase;letter-spacing:.01em}
+.grad{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:var(--ice);-webkit-text-fill-color:transparent}
+.lead{font-size:clamp(1.05rem,1.6vw,1.2rem);color:var(--fg-2);max-width:60ch}
+
+/* blade-cut panel: outer = glowing edge, inner = fill */
+.cut{padding:1px;background:linear-gradient(135deg,var(--violet),rgba(150,160,255,.14) 34%,rgba(150,160,255,.14) 66%,var(--ice));
+  clip-path:polygon(0 0,calc(100% - var(--cut)) 0,100% var(--cut),100% 100%,var(--cut) 100%,0 calc(100% - var(--cut)));min-width:0;display:flex}
+.cut>.in{flex:1;min-width:0;background:linear-gradient(160deg,var(--panel-2),var(--panel) 55%);padding:clamp(22px,3vw,32px);
+  clip-path:polygon(0 0,calc(100% - var(--cut)) 0,100% var(--cut),100% 100%,var(--cut) 100%,0 calc(100% - var(--cut)))}
+
+/* header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:40;margin-inline:calc(clamp(16px,5vw,56px) * -1);padding-inline:clamp(16px,5vw,56px);
+  background:rgba(6,7,12,.78);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);border-bottom:1px solid var(--line-soft)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:64px}
+.mark{font:800 1.9rem/1 var(--display);text-decoration:none;letter-spacing:.06em}
+nav{display:flex;align-items:center;gap:clamp(16px,3vw,36px)}
+nav a{text-decoration:none;color:var(--fg-2);transition:color .2s,text-shadow .2s}
+nav a:hover{color:var(--fg);text-shadow:0 0 16px var(--violet)}
+nav a.cta{color:var(--bg);background:var(--grad);padding:9px 18px;clip-path:polygon(10px 0,100% 0,calc(100% - 10px) 100%,0 100%);font-weight:600}
+nav a.cta:hover{color:var(--bg);text-shadow:none;filter:brightness(1.12)}
+@media (max-width:620px){nav a:not(.cta){display:none}}
+
+/* hero */
+.hero{position:relative;padding-block:clamp(48px,7vw,96px) clamp(40px,6vw,72px)}
+#aura{position:absolute;top:-64px;left:50%;transform:translateX(-50%);width:100vw;height:calc(100% + 64px);z-index:-1;pointer-events:none;-webkit-mask-image:linear-gradient(#000 72%,transparent);mask-image:linear-gradient(#000 72%,transparent)}
+.hero::before{content:"";position:absolute;z-index:-2;pointer-events:none;top:-64px;bottom:0;left:50%;width:100vw;transform:translateX(-50%);-webkit-mask-image:linear-gradient(#000 60%,transparent);mask-image:linear-gradient(#000 60%,transparent);
+  background:
+    radial-gradient(60% 62% at 50% 74%,rgba(139,108,255,.34),transparent 66%),
+    radial-gradient(34% 40% at 72% 66%,rgba(98,214,255,.18),transparent 70%),
+    repeating-linear-gradient(115deg,transparent 0 118px,rgba(150,160,255,.045) 118px 119px)}
+.status{display:inline-flex;align-items:center;gap:12px;color:var(--fg-2);border:1px solid var(--line);padding:8px 16px;margin-bottom:26px;background:rgba(14,17,28,.6)}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--ice);box-shadow:0 0 0 0 rgba(98,214,255,.7);animation:pulse 2.2s infinite}
+@keyframes pulse{70%{box-shadow:0 0 0 10px rgba(98,214,255,0)}100%{box-shadow:0 0 0 0 rgba(98,214,255,0)}}
+h1{font:800 clamp(3.5rem,19vw,15rem)/.82 var(--display);text-transform:uppercase;letter-spacing:.005em}
+h1 span{display:block;width:max-content}
+[data-fit]{white-space:nowrap}
+h1 .first{color:var(--fg);text-shadow:0 0 60px rgba(139,108,255,.35)}
+h1 .last{filter:drop-shadow(0 0 34px rgba(139,108,255,.45))}
+.slash{height:3px;width:min(100%,640px);margin-block:clamp(22px,3vw,34px);background:var(--grad);clip-path:polygon(0 0,100% 0,calc(100% - 8px) 100%,0 100%);box-shadow:0 0 22px var(--violet);transform-origin:left;animation:cutin .9s cubic-bezier(.2,.9,.2,1) both}
+@keyframes cutin{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:clamp(28px,5vw,72px);align-items:start}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.tag{font:600 clamp(1.5rem,3.1vw,2.3rem)/1.2 var(--body);letter-spacing:-.015em;text-wrap:balance}
+.intro{color:var(--fg-2);margin-top:18px;max-width:54ch}
+.actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:30px}
+.btn{font-family:var(--ui);font-weight:600;font-size:.88rem;letter-spacing:.16em;text-transform:uppercase;text-decoration:none;padding:16px 30px;display:inline-block;
+  clip-path:polygon(12px 0,100% 0,calc(100% - 12px) 100%,0 100%);transition:filter .2s,transform .2s,background .2s}
+.btn.solid{background:var(--grad);color:var(--bg)}
+.btn.solid:hover{filter:brightness(1.15);transform:translateY(-2px)}
+.btn.line{background:var(--violet-dim);color:var(--fg);box-shadow:inset 0 0 0 1px var(--line)}
+.btn.line:hover{background:rgba(139,108,255,.3);transform:translateY(-2px)}
+.sheet h3{font-family:var(--ui);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ice);font-weight:600;margin-bottom:8px}
+.sheet dl{margin:0}
+.sheet .r{display:flex;justify-content:space-between;gap:18px;padding:13px 0;border-top:1px solid var(--line-soft)}
+.sheet dt{color:var(--muted);font-family:var(--ui);font-size:.8rem;letter-spacing:.14em;text-transform:uppercase;padding-top:3px;flex:none}
+.sheet dd{margin:0;text-align:right;font-weight:600}
+.sheet dd.on{color:var(--ice)}
+
+/* stats */
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:clamp(44px,6vw,72px)}
+@media (max-width:820px){.stats{grid-template-columns:1fr}}
+.stats b{display:block;width:max-content;font:800 clamp(3rem,6vw,4.6rem)/.9 var(--display);letter-spacing:.01em;font-variant-numeric:tabular-nums}
+.stats span{display:block;margin-top:10px;color:var(--fg-2);font-size:1rem;line-height:1.45}
+
+/* resiware */
+.case-top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(24px,5vw,72px);align-items:end;margin-bottom:clamp(36px,5vw,56px)}
+@media (max-width:860px){.case-top{grid-template-columns:1fr;align-items:start}}
+.case-top h2{font-size:clamp(4rem,13vw,9.5rem)}
+.meta{color:var(--muted);margin-top:14px}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
+.chips span{font-family:var(--ui);font-size:.82rem;font-weight:500;padding:6px 13px;background:var(--violet-dim);box-shadow:inset 0 0 0 1px var(--line);color:var(--fg)}
+.sub{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;margin-bottom:20px}
+.sub h3{font:600 clamp(1.25rem,2.2vw,1.6rem)/1.25 var(--body);letter-spacing:-.01em}
+.legend{display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--fg-2)}
+.legend span{display:inline-flex;align-items:center;gap:8px}
+.legend i{width:10px;height:10px;display:inline-block}
+.legend .a{background:var(--ice)}.legend .b{background:var(--violet)}
+.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;counter-reset:s}
+@media (max-width:1040px){.flow{grid-template-columns:1fr}}
+.flow li{counter-increment:s;--cut:14px}
+.flow .in{padding:22px 20px 24px;display:flex;flex-direction:column;gap:8px}
+.flow .n{display:flex;justify-content:space-between;align-items:center;gap:10px}
+.flow .n::before{content:counter(s,decimal-leading-zero);font:800 2.6rem/1 var(--display);color:var(--muted)}
+.flow .k{font-family:var(--ui);font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:4px 9px;color:var(--ice);box-shadow:inset 0 0 0 1px rgba(98,214,255,.45)}
+.flow h4{font:700 1.2rem/1.25 var(--body);margin-top:4px}
+.flow p{color:var(--fg-2);font-size:.98rem;line-height:1.55}
+.flow li.llm{background:linear-gradient(135deg,var(--violet),var(--violet))}
+.flow li.llm .in{background:linear-gradient(160deg,#241a52,#141029 70%)}
+.flow li.llm .k{color:var(--fg);background:var(--violet);box-shadow:none}
+.flow li.llm .n::before{color:var(--violet)}
+.flow li.mine .n::before{color:var(--ice)}
+@media (max-width:1040px){.flow .in{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:20px;align-items:start}.flow .n{flex-direction:column;align-items:flex-start;grid-row:span 2}.flow h4{margin-top:0}}
+.mine-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}
+@media (max-width:860px){.mine-grid{grid-template-columns:1fr}}
+.mine-grid h4{font-family:var(--ui);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ice);font-weight:600;margin-bottom:6px}
+.mine-grid ul{list-style:none;margin:0;padding:0}
+.mine-grid li{padding:12px 0 12px 22px;border-top:1px solid var(--line-soft);color:var(--fg-2);position:relative}
+.mine-grid li:first-child{border-top:0}
+.mine-grid li::before{content:"";position:absolute;left:0;top:1.35em;width:8px;height:2px;background:var(--grad)}
+.mine-grid strong{color:var(--fg);font-weight:700}
+.repo{display:inline-block;margin-top:18px;color:var(--ice);text-decoration:none;border-bottom:1px solid rgba(98,214,255,.4);padding-bottom:3px}
+.repo:hover{border-color:var(--ice);text-shadow:0 0 14px var(--ice)}
+
+/* projects */
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:36px}
+@media (max-width:940px){.cards{grid-template-columns:1fr}}
+.card{transition:transform .25s,filter .25s}
+.card:hover{transform:translateY(-6px);filter:drop-shadow(0 18px 30px rgba(139,108,255,.28))}
+.card .in{display:flex;flex-direction:column;gap:12px}
+.card .from{color:var(--muted)}
+.card h3{font:700 1.4rem/1.2 var(--body);letter-spacing:-.01em}
+.card p{color:var(--fg-2);font-size:1rem;line-height:1.55}
+.card .tech{margin-top:auto;padding-top:14px;border-top:1px solid var(--line-soft);font-family:var(--ui);font-size:.86rem;color:var(--ice);line-height:1.6}
+
+/* background */
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.25fr);gap:18px;margin-top:36px;align-items:stretch}
+@media (max-width:940px){.two{grid-template-columns:1fr}}
+.edu h3{font:700 clamp(1.4rem,2.4vw,1.8rem)/1.2 var(--body);letter-spacing:-.01em}
+.edu .where{color:var(--fg-2);margin-top:6px}
+.edu .years{color:var(--ice);margin-top:14px}
+.hon{margin-top:20px}
+.hon div{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-top:1px solid var(--line-soft);color:var(--fg-2)}
+.hon b{color:var(--fg);font-weight:700;text-align:right;font-variant-numeric:tabular-nums}
+.courses{margin-top:16px;padding-top:16px;border-top:1px solid var(--line-soft);color:var(--muted);font-size:.95rem;line-height:1.7}
+.skill+.skill{margin-top:22px;padding-top:22px;border-top:1px solid var(--line-soft)}
+.skill h4{font-family:var(--ui);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ice);font-weight:600;margin-bottom:12px}
+.skill .chips{margin-top:0}
+.skill .chips span{font-size:.92rem;background:rgba(220,225,255,.05)}
+
+/* contact */
+.contact{position:relative;text-align:center;padding-bottom:clamp(72px,10vw,130px)}
+.contact::before{content:"";position:absolute;z-index:-1;top:0;bottom:0;left:50%;width:100vw;transform:translateX(-50%);pointer-events:none;background:radial-gradient(46% 60% at 50% 78%,rgba(139,108,255,.30),transparent 68%);-webkit-mask-image:linear-gradient(#000 70%,transparent);mask-image:linear-gradient(#000 70%,transparent)}
+.contact .label{justify-content:center}
+.contact h2{font-size:clamp(3.4rem,12vw,9rem)}
+.contact .lead{margin:20px auto 0}
+.mail{display:flex;flex-wrap:wrap;justify-content:center;align-items:center;gap:14px 18px;margin-top:38px}
+.mail code{font:700 clamp(1.15rem,3.4vw,1.9rem)/1.2 var(--body);user-select:all;overflow-wrap:anywhere}
+.copy{font-family:var(--ui);font-size:.8rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;background:var(--violet-dim);color:var(--fg);border:0;box-shadow:inset 0 0 0 1px var(--line);padding:11px 18px;cursor:pointer;transition:background .2s}
+.copy:hover{background:rgba(139,108,255,.32)}
+.links{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;margin-top:28px}
+.facts{display:flex;flex-wrap:wrap;justify-content:center;gap:8px 30px;margin-top:44px;color:var(--muted)}
+footer{border-top:1px solid var(--line-soft);padding-block:26px 36px;color:var(--muted);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px}
+@media (prefers-reduced-motion:reduce){.slash,.status i{animation:none}.card,.btn{transition:none}}
+
+/* ---- interface layer ---- */
+:root{--warn:#ff7a98}
+.progress{position:fixed;top:env(safe-area-inset-top,0px);left:0;height:2px;width:100%;transform-origin:left;transform:scaleX(0);background:var(--grad);z-index:50;box-shadow:0 0 12px var(--violet);pointer-events:none}
+nav a.active{color:var(--fg);text-shadow:0 0 16px var(--violet)}
+nav a:not(.cta){position:relative}
+nav a:not(.cta)::after{content:"";position:absolute;left:0;right:0;bottom:-8px;height:2px;background:var(--grad);transform:scaleX(0);transition:transform .3s}
+nav a.active::after,nav a:not(.cta):hover::after{transform:scaleX(1)}
+.cut{position:relative}
+.cut>.in{position:relative}
+.cut>.in::after{content:"";position:absolute;inset:0;pointer-events:none;opacity:0;transition:opacity .35s;
+  background:radial-gradient(280px circle at var(--sx,50%) var(--sy,50%),rgba(139,108,255,.24),rgba(98,214,255,.06) 45%,transparent 70%)}
+.cut:hover>.in::after{opacity:1}
+h1 span{animation:rise 1s cubic-bezier(.2,.9,.2,1) both}
+h1 .last{animation-delay:.14s}
+@keyframes rise{from{transform:translateY(.38em) skewX(-6deg);opacity:0}to{transform:none;opacity:1}}
+.rv{opacity:.3;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.rv.inview{opacity:1;transform:none}
+.flow li{transition:transform .35s,filter .35s}
+.flow li.active{transform:translateY(-6px);filter:drop-shadow(0 0 22px rgba(98,214,255,.6))}
+.flow li.llm.active{filter:drop-shadow(0 0 22px rgba(139,108,255,.8))}
+.flow li.done .n::before{color:var(--fg)}
+.sim{margin-top:14px}
+.sim .in{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);gap:clamp(20px,4vw,48px);align-items:start}
+@media (max-width:860px){.sim .in{grid-template-columns:1fr}}
+.sim h4{font:700 1.35rem/1.2 var(--body);letter-spacing:-.01em}
+.sim .note{color:var(--muted);font-size:.95rem;margin-top:8px}
+.sim-btns{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:20px}
+button.btn{border:0;cursor:pointer;font-size:.8rem;padding:14px 26px;text-align:left}
+.log{list-style:none;margin:0;padding:18px 20px;background:rgba(4,5,10,.7);box-shadow:inset 0 0 0 1px var(--line-soft);font-family:var(--ui);font-size:.95rem;line-height:1.55;min-height:15.5em;display:flex;flex-direction:column;gap:10px}
+.log li{display:grid;grid-template-columns:2.2em minmax(0,1fr);color:var(--fg-2);animation:logln .35s ease both}
+@keyframes logln{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}
+.log b{color:var(--muted);font-weight:600}
+.log .ok{color:var(--ice);font-weight:600}
+.log .no{color:var(--warn);font-weight:600;text-decoration:line-through}
+.log .fin{color:var(--fg);font-weight:600}
+@media (prefers-reduced-motion:reduce){h1 span,.log li{animation:none}.rv{opacity:1;transform:none;transition:none}.flow li{transition:none}}
+</style>
+</head>
+<body>
+
+<div class="progress" id="progress"></div>
+<header class="top">
+  <div class="wrap">
+    <a class="mark grad" href="#top" aria-label="Ahmad Almashhadani, back to top">AA</a>
+    <nav class="ui" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#projects">Projects</a>
+      <a href="#background">Skills</a>
+      <a href="#contact" class="cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <section class="hero">
+    <canvas id="aura" aria-hidden="true"></canvas>
+    <p class="status ui"><i></i>Available now &nbsp;·&nbsp; Doha, Qatar</p>
+    <h1 data-fit><span class="first">Ahmad</span><span class="last grad">Almashhadani</span></h1>
+    <div class="slash"></div>
+    <div class="hero-grid">
+      <div>
+        <p class="tag">I build software that lets AI act, <span class="grad">but only inside the rules.</span></p>
+        <p class="intro">Computer Science graduate from Qatar University. I write back-end systems and LLM-powered software in Python and JavaScript. Looking for a junior developer role or IT graduate programme in Qatar.</p>
+        <div class="actions">
+          <a class="btn solid" href="#work">See my work</a>
+          <a class="btn line" href="#contact">Contact me</a>
+        </div>
+      </div>
+      <div class="cut sheet"><div class="in">
+        <h3>Profile</h3>
+        <dl>
+          <div class="r"><dt>Role</dt><dd>Software Developer</dd></div>
+          <div class="r"><dt>Degree</dt><dd>B.Sc. Computer Science</dd></div>
+          <div class="r"><dt>University</dt><dd>Qatar University</dd></div>
+          <div class="r"><dt>Award</dt><dd>Distinction</dd></div>
+          <div class="r"><dt>Focus</dt><dd>Back end · LLM systems</dd></div>
+          <div class="r"><dt>Status</dt><dd class="on">Available immediately</dd></div>
+        </dl>
+      </div></div>
+    </div>
+
+    <div class="stats">
+      <div class="cut"><div class="in"><b class="grad" data-fit>3.60 / 4.00</b><span>GPA, with Distinction Award</span></div></div>
+      <div class="cut"><div class="in"><b class="grad" data-fit>~20,000</b><span>lines of Python in ResiWare, built by a team of four</span></div></div>
+      <div class="cut"><div class="in"><b class="grad" data-fit>3 + 5</b><span>semesters on the Vice President’s List and the Dean’s List</span></div></div>
+    </div>
+  </section>
+
+  <section id="work">
+    <p class="label ui">Main project</p>
+    <div class="case-top">
+      <div>
+        <h2 class="grad" data-fit style="width:max-content">ResiWare</h2>
+        <p class="meta ui">Senior capstone · Team of 4 · Sep 2025 – May 2026</p>
+      </div>
+      <div>
+        <p class="lead">A system that detects ransomware and responds on its own. It reads security alerts, groups them into incidents with a local LLM, scores the risk, and takes action.</p>
+        <div class="chips"><span>Python</span><span>Ollama / Qwen 3 8B</span><span>httpx</span><span>SQLite</span><span>Ansible</span><span>pytest</span></div>
+      </div>
+    </div>
+
+    <div class="sub">
+      <h3>How it decides what to do</h3>
+      <p class="legend ui"><span><i class="a"></i>Fixed rules</span><span><i class="b"></i>AI model</span></p>
+    </div>
+    <ol class="flow">
+      <li class="cut"><div class="in"><div class="n"><span class="k">Input</span></div><h4>Options arrive</h4><p>The system gets the possible actions for an incident.</p></div></li>
+      <li class="cut mine"><div class="in"><div class="n"><span class="k">Rules</span></div><h4>Policy engine</h4><p>Sorts actions by role and disruption cost. Blocks forbidden ones, forces required ones, then ranks the rest.</p></div></li>
+      <li class="cut llm"><div class="in"><div class="n"><span class="k">AI</span></div><h4>AI chooses</h4><p>The AI agent picks from the approved list only. Broken JSON output is repaired.</p></div></li>
+      <li class="cut mine"><div class="in"><div class="n"><span class="k">Rules</span></div><h4>Guard</h4><p>If the AI picks something not allowed, the guard swaps in the best approved action.</p></div></li>
+      <li class="cut"><div class="in"><div class="n"><span class="k">Feedback</span></div><h4>Result reported</h4><p>The outcome goes back for retraining. It is saved and resent if the service is down.</p></div></li>
+    </ol>
+
+    <div class="cut sim"><div class="in">
+      <div>
+        <h4>Run it yourself</h4>
+        <p class="note">A simplified illustration with example actions. It shows the idea, not the real system’s rules.</p>
+        <div class="sim-btns">
+          <button class="btn solid" id="runOk" type="button">▶ AI picks an allowed action</button>
+          <button class="btn line" id="runBad" type="button">▶ AI picks a blocked action</button>
+        </div>
+      </div>
+      <ol class="log" id="log" aria-live="polite"></ol>
+    </div></div>
+
+    <div class="mine-grid">
+      <div class="cut"><div class="in">
+        <h4>What I wrote</h4>
+        <ul>
+          <li><strong>The policy engine.</strong> Sole author: 430 lines of Python and 270 lines of unit tests.</li>
+          <li><strong>The guard and the JSON parser</strong> inside the action agent.</li>
+          <li><strong>The feedback service</strong> (co-written), with its local queue and replay.</li>
+        </ul>
+      </div></div>
+      <div class="cut"><div class="in">
+        <h4>What I owned for the team</h4>
+        <ul>
+          <li><strong>UML design:</strong> class, use-case and activity diagrams.</li>
+          <li><strong>UI design,</strong> non-functional requirements and the project plan.</li>
+          <li><strong>Logbooks,</strong> demo video and pitch video.</li>
+        </ul>
+        <a class="repo ui" href="https://github.com/kioxr/resiware" target="_blank" rel="noopener">View on GitHub ↗</a>
+      </div></div>
+    </div>
+  </section>
+
+  <section id="projects" style="padding-top:0">
+    <p class="label ui">More projects</p>
+    <h2>Also built</h2>
+    <div class="cards">
+      <article class="cut card"><div class="in">
+        <p class="from ui">Course project</p>
+        <h3>Full-stack web app</h3>
+        <p>A complete web application: an Express back end with a REST API, user login, a database, and a responsive front end.</p>
+        <p class="tech">Node.js · Express.js · REST API · HTML/CSS/JavaScript</p>
+      </div></article>
+      <article class="cut card"><div class="in">
+        <p class="from ui">Operating Systems</p>
+        <h3>Linux client–server app</h3>
+        <p>A socket-based client–server program, plus Bash scripts that automate file and process management on Linux.</p>
+        <p class="tech">Linux sockets · Bash</p>
+      </div></article>
+      <article class="cut card"><div class="in">
+        <p class="from ui">Software Engineering</p>
+        <h3>Team system project</h3>
+        <p>Led a team from requirements to a working system, using use-case and UML modelling and Agile delivery.</p>
+        <p class="tech">UML · Agile · Use-case modelling</p>
+      </div></article>
+    </div>
+  </section>
+
+  <section id="background" style="padding-top:0">
+    <p class="label ui">Background</p>
+    <h2>Skills &amp; study</h2>
+    <div class="two">
+      <div class="cut edu"><div class="in">
+        <h3>B.Sc. in Computer Science</h3>
+        <p class="where">Qatar University, College of Engineering</p>
+        <p class="years ui">2022 – May 2026</p>
+        <div class="hon">
+          <div><span>GPA</span><b>3.60 / 4.00</b></div>
+          <div><span>Award</span><b>Distinction</b></div>
+          <div><span>Vice President’s List</span><b>3 semesters</b></div>
+          <div><span>Dean’s List</span><b>5 semesters</b></div>
+        </div>
+        <p class="courses">Software Engineering · Data Structures · Algorithms · Object-Oriented Programming · Operating Systems · Database Systems · Web Development · Machine Learning · Computer Networks · Probability &amp; Statistics</p>
+      </div></div>
+      <div class="cut"><div class="in">
+        <div class="skill"><h4>Languages</h4><div class="chips"><span>Python</span><span>JavaScript</span><span>C#</span><span>SQL</span><span>Bash</span></div></div>
+        <div class="skill"><h4>Back end &amp; web</h4><div class="chips"><span>Node.js</span><span>Express.js</span><span>REST APIs</span><span>FastAPI</span><span>HTML/CSS</span></div></div>
+        <div class="skill"><h4>AI / LLM systems</h4><div class="chips"><span>Ollama (local LLMs)</span><span>LLM output validation</span><span>Policy-constrained LLM decisions</span></div></div>
+        <div class="skill"><h4>Databases</h4><div class="chips"><span>MySQL</span><span>Oracle SQL</span><span>SQLite</span><span>Firebase</span></div></div>
+        <div class="skill"><h4>Tools &amp; practice</h4><div class="chips"><span>Git/GitHub</span><span>Linux</span><span>pytest</span><span>Agile</span><span>UML</span><span>Ansible</span><span>VirtualBox</span><span>VS Code</span><span>Unity</span></div></div>
+      </div></div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" style="padding-top:0">
+    <p class="label ui">Contact</p>
+    <h2>Let’s <span class="grad">work together</span></h2>
+    <p class="lead">I’m available immediately for junior developer roles and graduate programmes in Qatar.</p>
+    <div class="mail">
+      <code id="email">abfmashhadani@gmail.com</code>
+      <button class="copy" id="copy" type="button">Copy</button>
+    </div>
+    <div class="links">
+      <a class="btn solid" href="https://www.linkedin.com/in/ahmad-almashhadani" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="btn line" href="https://github.com/kioxr" target="_blank" rel="noopener">GitHub ↗</a>
+    </div>
+    <div class="facts ui"><span>Arabic · Native</span><span>English · Fluent</span><span>Based in Doha</span></div>
+  </section>
+</main>
+
+<footer class="wrap ui">
+  <span>© 2026 Ahmad Almashhadani</span>
+  <span>Doha, Qatar</span>
+</footer>
+
+<script>
+(function(){
+  var copy=document.getElementById('copy'), email=document.getElementById('email');
+  copy.addEventListener('click',function(){
+    function reset(){copy.textContent='Copy';}
+    function done(){copy.textContent='Copied'; setTimeout(reset,1800);}
+    function select(){
+      var r=document.createRange(); r.selectNodeContents(email);
+      var s=getSelection(); s.removeAllRanges(); s.addRange(r);
+      copy.textContent='Selected'; setTimeout(reset,2400);
+    }
+    try{navigator.clipboard.writeText(email.textContent.trim()).then(done,select);}catch(e){select();}
+  });
+
+  // scroll progress + active nav link
+  var bar=document.getElementById('progress'), links=document.querySelectorAll('nav a[href^="#"]');
+  function prog(){var h=document.documentElement, m=h.scrollHeight-h.clientHeight; bar.style.transform='scaleX('+(m>0?Math.min(1,h.scrollTop/m):0)+')';}
+  prog(); window.addEventListener('scroll',prog,{passive:true}); window.addEventListener('resize',prog);
+  var noMotion=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if('IntersectionObserver' in window){
+    var spy=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){
+      for(var i=0;i<links.length;i++){links[i].classList.toggle('active',links[i].getAttribute('href')==='#'+e.target.id);} }});},{rootMargin:'-45% 0px -50% 0px'});
+    ['work','projects','background','contact'].forEach(function(id){var el=document.getElementById(id); if(el) spy.observe(el);});
+    if(!noMotion){
+      var rv=new IntersectionObserver(function(es){es.forEach(function(e){ if(e.isIntersecting){e.target.classList.add('inview'); rv.unobserve(e.target);} });},{rootMargin:'0px 0px -8% 0px'});
+      var items=document.querySelectorAll('main section:not(.hero) > *');
+      for(var i=0;i<items.length;i++){ if(items[i].getBoundingClientRect().top>window.innerHeight){items[i].classList.add('rv'); rv.observe(items[i]);} }
+    }
+  }
+
+  // glow that follows the cursor inside each panel
+  document.addEventListener('pointermove',function(e){
+    var c=e.target.closest&&e.target.closest('.cut'); if(!c) return;
+    var inn=c.firstElementChild, b=inn.getBoundingClientRect();
+    inn.style.setProperty('--sx',(e.clientX-b.left)+'px'); inn.style.setProperty('--sy',(e.clientY-b.top)+'px');
+  },{passive:true});
+
+  // ResiWare decision demo (illustrative)
+  var steps=document.querySelectorAll('.flow li'), log=document.getElementById('log'), run=0;
+  function lines(bad){
+    return [
+      'Options received: Isolate host, Kill process, Block IP, Shut down server',
+      'Policy engine blocks <span class="no">Shut down server</span> (too disruptive). Ranked: Isolate host, Kill process, Block IP',
+      bad?'AI picks <span class="no">Shut down server</span>':'AI picks <span class="ok">Kill process</span>',
+      bad?'Guard: not allowed. Replaced with <span class="ok">Isolate host</span>, the best approved action':'Guard: the choice is approved, so it goes through',
+      '<span class="fin">Action taken: '+(bad?'Isolate host':'Kill process')+'.</span> Outcome sent to the learning layer'
+    ];
+  }
+  function show(i,txt){
+    for(var k=0;k<steps.length;k++){steps[k].classList.toggle('active',k===i); if(k<i) steps[k].classList.add('done');}
+    var li=document.createElement('li'); li.innerHTML='<b>0'+(i+1)+'</b><span>'+txt+'</span>'; log.appendChild(li);
+  }
+  function play(bad,instant){
+    var me=++run, L=lines(bad), i=0; log.innerHTML='';
+    for(var k=0;k<steps.length;k++){steps[k].classList.remove('active','done');}
+    (function next(){
+      if(me!==run) return;
+      show(i,L[i]); i++;
+      if(i<L.length){ if(instant){next();} else {setTimeout(next,850);} }
+    })();
+  }
+  document.getElementById('runOk').addEventListener('click',function(){play(false,noMotion);});
+  document.getElementById('runBad').addEventListener('click',function(){play(true,noMotion);});
+  play(true,true);
+
+  // shrink big headings so they always fit on one line, whatever font loads
+  function fit(){
+    var els=document.querySelectorAll('[data-fit]');
+    for(var i=0;i<els.length;i++){
+      var el=els[i], par=el.parentElement; el.style.fontSize='';
+      var cs=getComputedStyle(par), avail=par.clientWidth-parseFloat(cs.paddingLeft)-parseFloat(cs.paddingRight);
+      var max=parseFloat(getComputedStyle(el).fontSize), r=document.createRange(); r.selectNodeContents(el);
+      var w=0, kids=el.children.length?el.children:[el];
+      for(var k=0;k<kids.length;k++){ w=Math.max(w,kids[k].getBoundingClientRect().width); }
+      if(w>avail&&w>0){ el.style.fontSize=(max*avail/w*.985)+'px'; }
+    }
+  }
+  fit(); window.addEventListener('resize',fit);
+  if(document.fonts&&document.fonts.ready){document.fonts.ready.then(fit);}
+  window.addEventListener('load',fit);
+
+  // rising aura particles behind the name
+  var c=document.getElementById('aura'); if(!c||!c.getContext) return;
+  var x=c.getContext('2d'), W=0, H=0, P=[], on=true, raf=0;
+  var still=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+  function size(){
+    var d=Math.min(window.devicePixelRatio||1,2), b=c.getBoundingClientRect();
+    W=b.width; H=b.height; c.width=W*d; c.height=H*d; x.setTransform(d,0,0,d,0,0);
+  }
+  function spawn(any){
+    var ice=Math.random()<.38;
+    return {x:Math.random()*W, y:any?Math.random()*H:H+10, r:.6+Math.random()*2.2, v:.25+Math.random()*.9,
+            s:Math.random()*6.28, a:.25+Math.random()*.6, c:ice?'98,214,255':'150,120,255', l:8+Math.random()*26};
+  }
+  var B=[];
+  function blob(any){var ice=Math.random()<.35, r=110+Math.random()*(W<700?120:240); return {x:W*(.12+Math.random()*.76), y:any?H*(.3+Math.random()*.7):H+r*.6, r:r, v:.18+Math.random()*.4, s:Math.random()*6.28, a:.045+Math.random()*.055, c:ice?'98,214,255':'139,108,255'};}
+  function fill(){P=[]; B=[]; var n=Math.round(Math.min(120,Math.max(40,W/11))); for(var i=0;i<n;i++) P.push(spawn(true)); var m=W<700?7:13; for(var j=0;j<m;j++) B.push(blob(true));}
+  function draw(move){
+    x.clearRect(0,0,W,H); x.globalCompositeOperation='lighter';
+    for(var j=0;j<B.length;j++){
+      var q=B[j];
+      if(move){q.y-=q.v; q.s+=.006; q.x+=Math.sin(q.s)*.5; if(q.y<-q.r) B[j]=q=blob(false);}
+      var rg=x.createRadialGradient(q.x,q.y,0,q.x,q.y,q.r);
+      rg.addColorStop(0,'rgba('+q.c+','+q.a+')'); rg.addColorStop(1,'rgba('+q.c+',0)');
+      x.fillStyle=rg; x.beginPath(); x.arc(q.x,q.y,q.r,0,6.283); x.fill();
+    }
+    for(var i=0;i<P.length;i++){
+      var p=P[i];
+      if(move){p.y-=p.v; p.s+=.018; p.x+=Math.sin(p.s)*.35; if(p.y<-30) P[i]=p=spawn(false);}
+      var f=Math.min(1,p.y/(H*.55)), al=p.a*(.15+.85*f);
+      var g=x.createLinearGradient(p.x,p.y,p.x,p.y+p.l);
+      g.addColorStop(0,'rgba('+p.c+','+al+')'); g.addColorStop(1,'rgba('+p.c+',0)');
+      x.fillStyle=g; x.fillRect(p.x-p.r/2,p.y,p.r,p.l);
+      x.fillStyle='rgba('+p.c+','+al+')'; x.beginPath(); x.arc(p.x,p.y,p.r,0,6.283); x.fill();
+    }
+  }
+  function loop(){ if(on){draw(true);} raf=requestAnimationFrame(loop); }
+  size(); fill(); draw(false);
+  window.addEventListener('resize',function(){size(); fill(); draw(false);});
+  if(!still){
+    if('IntersectionObserver' in window){ new IntersectionObserver(function(e){on=e[0].isIntersecting;}).observe(c); }
+    loop();
+  }
+})();
+</script>
+
+</body>
+</html>
