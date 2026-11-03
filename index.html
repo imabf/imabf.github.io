@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<meta name="description" content="Ahmad Almashhadani: Computer Science graduate and software developer in Doha, Qatar. Back-end and LLM systems.">
+<meta name="description" content="Ahmad Almashhadani: Computer Science graduate in Doha, Qatar. Software QA testing and business analysis. Business Analyst Intern at Applab.">
 <meta property="og:title" content="Ahmad Almashhadani">
-<meta property="og:description" content="Software developer in Doha, Qatar. Back-end and LLM systems.">
+<meta property="og:description" content="Software QA and business analysis in Doha, Qatar.">
 <meta property="og:url" content="https://imabf.github.io/">
 <style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
 <title>Ahmad Almashhadani</title>
@@ -111,27 +111,6 @@ h1 .last{filter:drop-shadow(0 0 34px rgba(139,108,255,.45))}
 .meta{color:var(--muted);margin-top:14px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}
 .chips span{font-family:var(--ui);font-size:.82rem;font-weight:500;padding:6px 13px;background:var(--violet-dim);box-shadow:inset 0 0 0 1px var(--line);color:var(--fg)}
-.sub{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:baseline;gap:8px 24px;margin-bottom:20px}
-.sub h3{font:600 clamp(1.25rem,2.2vw,1.6rem)/1.25 var(--body);letter-spacing:-.01em}
-.legend{display:flex;flex-wrap:wrap;gap:8px 22px;color:var(--fg-2)}
-.legend span{display:inline-flex;align-items:center;gap:8px}
-.legend i{width:10px;height:10px;display:inline-block}
-.legend .a{background:var(--ice)}.legend .b{background:var(--violet)}
-.flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;counter-reset:s}
-@media (max-width:1040px){.flow{grid-template-columns:1fr}}
-.flow li{counter-increment:s;--cut:14px}
-.flow .in{padding:22px 20px 24px;display:flex;flex-direction:column;gap:8px}
-.flow .n{display:flex;justify-content:space-between;align-items:center;gap:10px}
-.flow .n::before{content:counter(s,decimal-leading-zero);font:800 2.6rem/1 var(--display);color:var(--muted)}
-.flow .k{font-family:var(--ui);font-size:.7rem;font-weight:600;letter-spacing:.16em;text-transform:uppercase;padding:4px 9px;color:var(--ice);box-shadow:inset 0 0 0 1px rgba(98,214,255,.45)}
-.flow h4{font:700 1.2rem/1.25 var(--body);margin-top:4px}
-.flow p{color:var(--fg-2);font-size:.98rem;line-height:1.55}
-.flow li.llm{background:linear-gradient(135deg,var(--violet),var(--violet))}
-.flow li.llm .in{background:linear-gradient(160deg,#241a52,#141029 70%)}
-.flow li.llm .k{color:var(--fg);background:var(--violet);box-shadow:none}
-.flow li.llm .n::before{color:var(--violet)}
-.flow li.mine .n::before{color:var(--ice)}
-@media (max-width:1040px){.flow .in{display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:20px;align-items:start}.flow .n{flex-direction:column;align-items:flex-start;grid-row:span 2}.flow h4{margin-top:0}}
 .mine-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:18px}
 @media (max-width:860px){.mine-grid{grid-template-columns:1fr}}
 .mine-grid h4{font-family:var(--ui);font-size:.8rem;letter-spacing:.2em;text-transform:uppercase;color:var(--ice);font-weight:600;margin-bottom:6px}
@@ -201,24 +180,8 @@ h1 .last{animation-delay:.14s}
 @keyframes rise{from{transform:translateY(.38em) skewX(-6deg);opacity:0}to{transform:none;opacity:1}}
 .rv{opacity:.3;transform:translateY(26px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
 .rv.inview{opacity:1;transform:none}
-.flow li{transition:transform .35s,filter .35s}
-.flow li.active{transform:translateY(-6px);filter:drop-shadow(0 0 22px rgba(98,214,255,.6))}
-.flow li.llm.active{filter:drop-shadow(0 0 22px rgba(139,108,255,.8))}
-.flow li.done .n::before{color:var(--fg)}
-.sim{margin-top:14px}
-.sim .in{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.4fr);gap:clamp(20px,4vw,48px);align-items:start}
-@media (max-width:860px){.sim .in{grid-template-columns:1fr}}
-.sim h4{font:700 1.35rem/1.2 var(--body);letter-spacing:-.01em}
-.sim .note{color:var(--muted);font-size:.95rem;margin-top:8px}
-.sim-btns{display:flex;flex-direction:column;align-items:flex-start;gap:12px;margin-top:20px}
 button.btn{border:0;cursor:pointer;font-size:.8rem;padding:14px 26px;text-align:left}
-.log{list-style:none;margin:0;padding:18px 20px;background:rgba(4,5,10,.7);box-shadow:inset 0 0 0 1px var(--line-soft);font-family:var(--ui);font-size:.95rem;line-height:1.55;min-height:15.5em;display:flex;flex-direction:column;gap:10px}
-.log li{display:grid;grid-template-columns:2.2em minmax(0,1fr);color:var(--fg-2);animation:logln .35s ease both}
 @keyframes logln{from{opacity:0;transform:translateX(-8px)}to{opacity:1;transform:none}}
-.log b{color:var(--muted);font-weight:600}
-.log .ok{color:var(--ice);font-weight:600}
-.log .no{color:var(--warn);font-weight:600;text-decoration:line-through}
-.log .fin{color:var(--fg);font-weight:600}
 @media (prefers-reduced-motion:reduce){h1 span,.log li{animation:none}.rv{opacity:1;transform:none;transition:none}.flow li{transition:none}}
 </style>
 </head>
@@ -240,13 +203,13 @@ button.btn{border:0;cursor:pointer;font-size:.8rem;padding:14px 26px;text-align:
 <main class="wrap" id="top">
   <section class="hero">
     <canvas id="aura" aria-hidden="true"></canvas>
-    <p class="status ui"><i></i>Available now &nbsp;·&nbsp; Doha, Qatar</p>
+    <p class="status ui"><i></i>Business Analyst Intern at Applab &nbsp;·&nbsp; Doha, Qatar</p>
     <h1 data-fit><span class="first">Ahmad</span><span class="last grad">Almashhadani</span></h1>
     <div class="slash"></div>
     <div class="hero-grid">
       <div>
-        <p class="tag">I build software that lets AI act, <span class="grad">but only inside the rules.</span></p>
-        <p class="intro">Computer Science graduate from Qatar University. I write back-end systems and LLM-powered software in Python and JavaScript. Looking for a junior developer role or IT graduate programme in Qatar.</p>
+        <p class="tag">I test software and shape requirements, <span class="grad">so teams ship what users need.</span></p>
+        <p class="intro">Computer Science graduate from Qatar University. I focus on software quality assurance and business analysis: test cases, bug reports, API testing with Postman, SQL data validation, requirements and user stories. Currently a Business Analyst Intern at Applab.</p>
         <div class="actions">
           <a class="btn solid" href="#work">See my work</a>
           <a class="btn line" href="#contact">Contact me</a>
@@ -255,75 +218,49 @@ button.btn{border:0;cursor:pointer;font-size:.8rem;padding:14px 26px;text-align:
       <div class="cut sheet"><div class="in">
         <h3>Profile</h3>
         <dl>
-          <div class="r"><dt>Role</dt><dd>Software Developer</dd></div>
+          <div class="r"><dt>Role</dt><dd>Business Analyst Intern</dd></div>
           <div class="r"><dt>Degree</dt><dd>B.Sc. Computer Science</dd></div>
           <div class="r"><dt>University</dt><dd>Qatar University</dd></div>
           <div class="r"><dt>Award</dt><dd>Distinction</dd></div>
-          <div class="r"><dt>Focus</dt><dd>Back end · LLM systems</dd></div>
-          <div class="r"><dt>Status</dt><dd class="on">Available immediately</dd></div>
+          <div class="r"><dt>Focus</dt><dd>Software QA · Business analysis</dd></div>
+          <div class="r"><dt>Internship</dt><dd class="on">Applab · Oct 2026 – Jan 2027</dd></div>
         </dl>
       </div></div>
     </div>
 
     <div class="stats">
-      <div class="cut"><div class="in"><b class="grad" data-fit>3.60 / 4.00</b><span>GPA, with Distinction Award</span></div></div>
-      <div class="cut"><div class="in"><b class="grad" data-fit>~20,000</b><span>lines of Python in ResiWare, built by a team of four</span></div></div>
-      <div class="cut"><div class="in"><b class="grad" data-fit>3 + 5</b><span>semesters on the Vice President’s List and the Dean’s List</span></div></div>
+      <div class="cut"><div class="in"><b class="grad" data-fit>3.6 / 4.0</b><span>GPA, with Distinction Award</span></div></div>
+      <div class="cut"><div class="in"><b class="grad" data-fit>22</b><span>login test cases written: positive, negative, boundary and security</span></div></div>
+      <div class="cut"><div class="in"><b class="grad" data-fit>20</b><span>Postman assertions across 12 API requests</span></div></div>
     </div>
   </section>
 
   <section id="work">
-    <p class="label ui">Main project</p>
+    <p class="label ui">Senior project</p>
     <div class="case-top">
       <div>
         <h2 class="grad" data-fit style="width:max-content">ResiWare</h2>
-        <p class="meta ui">Senior capstone · Team of 4 · Sep 2025 – May 2026</p>
+        <p class="meta ui">Senior project · Built as a team · Sep 2025 – May 2026</p>
       </div>
       <div>
-        <p class="lead">A system that detects ransomware and responds on its own. It reads security alerts, groups them into incidents with a local LLM, scores the risk, and takes action.</p>
-        <div class="chips"><span>Python</span><span>Ollama / Qwen 3 8B</span><span>httpx</span><span>SQLite</span><span>Ansible</span><span>pytest</span></div>
+        <p class="lead">An AI-assisted ransomware defense system that helps detect and respond to ransomware threats in an organization’s network.</p>
+        <div class="chips"><span>Cybersecurity</span><span>Team project</span><span>Python</span><span>Testing</span></div>
       </div>
     </div>
-
-    <div class="sub">
-      <h3>How it decides what to do</h3>
-      <p class="legend ui"><span><i class="a"></i>Fixed rules</span><span><i class="b"></i>AI model</span></p>
-    </div>
-    <ol class="flow">
-      <li class="cut"><div class="in"><div class="n"><span class="k">Input</span></div><h4>Options arrive</h4><p>The system gets the possible actions for an incident.</p></div></li>
-      <li class="cut mine"><div class="in"><div class="n"><span class="k">Rules</span></div><h4>Policy engine</h4><p>Sorts actions by role and disruption cost. Blocks forbidden ones, forces required ones, then ranks the rest.</p></div></li>
-      <li class="cut llm"><div class="in"><div class="n"><span class="k">AI</span></div><h4>AI chooses</h4><p>The AI agent picks from the approved list only. Broken JSON output is repaired.</p></div></li>
-      <li class="cut mine"><div class="in"><div class="n"><span class="k">Rules</span></div><h4>Guard</h4><p>If the AI picks something not allowed, the guard swaps in the best approved action.</p></div></li>
-      <li class="cut"><div class="in"><div class="n"><span class="k">Feedback</span></div><h4>Result reported</h4><p>The outcome goes back for retraining. It is saved and resent if the service is down.</p></div></li>
-    </ol>
-
-    <div class="cut sim"><div class="in">
-      <div>
-        <h4>Run it yourself</h4>
-        <p class="note">A simplified illustration with example actions. It shows the idea, not the real system’s rules.</p>
-        <div class="sim-btns">
-          <button class="btn solid" id="runOk" type="button">▶ AI picks an allowed action</button>
-          <button class="btn line" id="runBad" type="button">▶ AI picks a blocked action</button>
-        </div>
-      </div>
-      <ol class="log" id="log" aria-live="polite"></ol>
-    </div></div>
 
     <div class="mine-grid">
       <div class="cut"><div class="in">
-        <h4>What I wrote</h4>
+        <h4>What it does</h4>
         <ul>
-          <li><strong>The policy engine.</strong> Sole author: 430 lines of Python and 270 lines of unit tests.</li>
-          <li><strong>The guard and the JSON parser</strong> inside the action agent.</li>
-          <li><strong>The feedback service</strong> (co-written), with its local queue and replay.</li>
+          <li>Watches security events in a network and spots ransomware activity.</li>
+          <li>Helps the organization respond to the threat.</li>
         </ul>
       </div></div>
       <div class="cut"><div class="in">
-        <h4>What I owned for the team</h4>
+        <h4>How it was tested</h4>
         <ul>
-          <li><strong>UML design:</strong> class, use-case and activity diagrams.</li>
-          <li><strong>UI design,</strong> non-functional requirements and the project plan.</li>
-          <li><strong>Logbooks,</strong> demo video and pitch video.</li>
+          <li>Evaluated on simulated security events.</li>
+          <li>Successfully flagged ransomware activity.</li>
         </ul>
         <a class="repo ui" href="https://github.com/imabf/resiware" target="_blank" rel="noopener">View on GitHub ↗</a>
       </div></div>
@@ -335,40 +272,43 @@ button.btn{border:0;cursor:pointer;font-size:.8rem;padding:14px 26px;text-align:
     <h2>Also built</h2>
     <div class="cards">
       <article class="cut card"><div class="in">
-        <p class="from ui">Personal project</p>
-        <h3>D-Learn</h3>
-        <p>A screen-aware, voice-first German study companion for macOS. Hold a hotkey, ask about what is on your screen, and get a spoken answer plus an automatic spaced-repetition vocabulary deck, inside a full A1 to C2 course with exam training.</p>
-        <p class="tech">Electron · TypeScript · Text-to-speech · Spaced repetition (FSRS)</p>
+        <p class="from ui">QA portfolio</p>
+        <h3>Test cases &amp; bug reports</h3>
+        <p>22 login-page test cases covering positive, negative, boundary and security scenarios, and 5 bug reports from testing a practice login site, each with steps, expected vs actual result and severity.</p>
+        <p class="tech">Test design · EP &amp; BVA · Bug reporting</p>
+        <a class="repo ui" href="https://github.com/imabf/imabf/tree/main/qa-portfolio" target="_blank" rel="noopener">View on GitHub ↗</a>
       </div></article>
       <article class="cut card"><div class="in">
-        <p class="from ui">Personal project</p>
-        <h3>Discord Language Partner</h3>
-        <p>A Discord bot you talk to in a voice channel to practise a language. It answers out loud at your level (A1 to C2), handles natural turn-taking and interruptions, and keeps data private, with per-user opt-in and one-command deletion.</p>
-        <p class="tech">TypeScript · Speech-to-text · LLM · Text-to-speech · Docker</p>
+        <p class="from ui">QA portfolio</p>
+        <h3>API testing with Postman</h3>
+        <p>A Postman collection for the public restful-booker API: authentication, create, read, update and delete, plus negative tests. 12 requests and 20 assertions, run with environment variables.</p>
+        <p class="tech">Postman · REST APIs · Test scripts</p>
+        <a class="repo ui" href="https://github.com/imabf/imabf/tree/main/qa-portfolio/postman" target="_blank" rel="noopener">View on GitHub ↗</a>
       </div></article>
       <article class="cut card"><div class="in">
-        <p class="from ui">Personal project</p>
-        <h3>Desk LockIn</h3>
-        <p>A privacy-first desk habit monitor. It uses the camera to verify sips, phone use and breaks before it interrupts you, and a local LLM watchdog closes entertainment tabs. Nothing leaves your machine.</p>
-        <p class="tech">Python · Computer vision · Local LLM (Ollama) · PyInstaller</p>
-      </div></article>
-      <article class="cut card"><div class="in">
-        <p class="from ui">Course project</p>
-        <h3>Full-stack web app</h3>
-        <p>A complete web application: an Express back end with a REST API, user login, a database, and a responsive front end.</p>
-        <p class="tech">Node.js · Express.js · REST API · HTML/CSS/JavaScript</p>
-      </div></article>
-      <article class="cut card"><div class="in">
-        <p class="from ui">Operating Systems</p>
-        <h3>Linux client–server app</h3>
-        <p>A socket-based client–server program, plus Bash scripts that automate file and process management on Linux.</p>
-        <p class="tech">Linux sockets · Bash</p>
+        <p class="from ui">QA portfolio</p>
+        <h3>SQL data validation</h3>
+        <p>Tester queries that find duplicates, missing values, orphan records, invalid values and wrong totals, run against a sample database with planted defects.</p>
+        <p class="tech">SQL · SQLite · Data validation</p>
+        <a class="repo ui" href="https://github.com/imabf/imabf/tree/main/qa-portfolio/sql" target="_blank" rel="noopener">View on GitHub ↗</a>
       </div></article>
       <article class="cut card"><div class="in">
         <p class="from ui">Software Engineering</p>
         <h3>Team system project</h3>
-        <p>Led a team from requirements to a working system, using use-case and UML modelling and Agile delivery.</p>
-        <p class="tech">UML · Agile · Use-case modelling</p>
+        <p>A complete system built from requirements to implementation, with use-case and UML modelling, by an Agile team.</p>
+        <p class="tech">Requirements · UML · Use cases · Agile</p>
+      </div></article>
+      <article class="cut card"><div class="in">
+        <p class="from ui">Course project</p>
+        <h3>Full-stack web app</h3>
+        <p>A web application with Node.js on the front end and back end, user authentication and RESTful APIs.</p>
+        <p class="tech">Node.js · REST APIs · Authentication</p>
+      </div></article>
+      <article class="cut card"><div class="in">
+        <p class="from ui">Security testing</p>
+        <h3>Password security testing</h3>
+        <p>A mini project that simulated a brute-force attack in a controlled environment. I reported the findings and suggested password policy improvements.</p>
+        <p class="tech">Security testing · Reporting</p>
       </div></article>
     </div>
   </section>
@@ -390,11 +330,11 @@ button.btn{border:0;cursor:pointer;font-size:.8rem;padding:14px 26px;text-align:
         <p class="courses">Software Engineering · Data Structures · Algorithms · Object-Oriented Programming · Operating Systems · Database Systems · Web Development · Machine Learning · Computer Networks · Probability &amp; Statistics</p>
       </div></div>
       <div class="cut"><div class="in">
-        <div class="skill"><h4>Languages</h4><div class="chips"><span>Python</span><span>JavaScript</span><span>C#</span><span>SQL</span><span>Bash</span></div></div>
-        <div class="skill"><h4>Back end &amp; web</h4><div class="chips"><span>Node.js</span><span>Express.js</span><span>REST APIs</span><span>FastAPI</span><span>HTML/CSS</span></div></div>
-        <div class="skill"><h4>AI / LLM systems</h4><div class="chips"><span>Ollama (local LLMs)</span><span>LLM output validation</span><span>Policy-constrained LLM decisions</span></div></div>
+        <div class="skill"><h4>QA testing</h4><div class="chips"><span>Manual testing</span><span>Test case design</span><span>Bug reporting</span><span>API testing (Postman)</span><span>SQL data validation</span><span>Equivalence partitioning</span><span>Boundary value analysis</span><span>SDLC / STLC</span></div></div>
+        <div class="skill"><h4>Business analysis</h4><div class="chips"><span>Requirements gathering</span><span>User stories &amp; acceptance criteria</span><span>Process flows</span><span>UML &amp; use cases</span></div></div>
+        <div class="skill"><h4>Programming</h4><div class="chips"><span>Python</span><span>JavaScript</span><span>HTML</span><span>CSS</span><span>Node.js</span><span>C#</span><span>Bash</span></div></div>
         <div class="skill"><h4>Databases</h4><div class="chips"><span>MySQL</span><span>Oracle SQL</span><span>SQLite</span><span>Firebase</span></div></div>
-        <div class="skill"><h4>Tools &amp; practice</h4><div class="chips"><span>Git/GitHub</span><span>Linux</span><span>pytest</span><span>Agile</span><span>UML</span><span>Ansible</span><span>VirtualBox</span><span>VS Code</span><span>Unity</span></div></div>
+        <div class="skill"><h4>Tools &amp; concepts</h4><div class="chips"><span>Jira</span><span>Postman</span><span>GitHub</span><span>VS Code</span><span>Linux</span><span>Agile / Scrum</span><span>REST APIs</span><span>Client-server architecture</span><span>Secure coding</span><span>Network security basics</span></div></div>
       </div></div>
     </div>
   </section>
@@ -402,7 +342,7 @@ button.btn{border:0;cursor:pointer;font-size:.8rem;padding:14px 26px;text-align:
   <section class="contact" id="contact" style="padding-top:0">
     <p class="label ui">Contact</p>
     <h2>Let’s <span class="grad">work together</span></h2>
-    <p class="lead">I’m available immediately for junior developer roles and graduate programmes in Qatar.</p>
+    <p class="lead">Open to software QA and business analysis roles in Qatar. Currently a Business Analyst Intern at Applab.</p>
     <div class="mail">
       <code id="email">abfmashhadani@gmail.com</code>
       <button class="copy" id="copy" type="button">Copy</button>
@@ -411,7 +351,7 @@ button.btn{border:0;cursor:pointer;font-size:.8rem;padding:14px 26px;text-align:
       <a class="btn solid" href="https://www.linkedin.com/in/ahmad-almashhadani" target="_blank" rel="noopener">LinkedIn ↗</a>
       <a class="btn line" href="https://github.com/imabf" target="_blank" rel="noopener">GitHub ↗</a>
     </div>
-    <div class="facts ui"><span>Arabic · Native</span><span>English · Fluent</span><span>Based in Doha</span></div>
+    <div class="facts ui"><span>Arabic · Native</span><span>English · Fluent</span><span>German · Beginner</span><span>Based in Doha</span></div>
   </section>
 </main>
 
@@ -456,34 +396,6 @@ button.btn{border:0;cursor:pointer;font-size:.8rem;padding:14px 26px;text-align:
     var inn=c.firstElementChild, b=inn.getBoundingClientRect();
     inn.style.setProperty('--sx',(e.clientX-b.left)+'px'); inn.style.setProperty('--sy',(e.clientY-b.top)+'px');
   },{passive:true});
-
-  // ResiWare decision demo (illustrative)
-  var steps=document.querySelectorAll('.flow li'), log=document.getElementById('log'), run=0;
-  function lines(bad){
-    return [
-      'Options received: Isolate host, Kill process, Block IP, Shut down server',
-      'Policy engine blocks <span class="no">Shut down server</span> (too disruptive). Ranked: Isolate host, Kill process, Block IP',
-      bad?'AI picks <span class="no">Shut down server</span>':'AI picks <span class="ok">Kill process</span>',
-      bad?'Guard: not allowed. Replaced with <span class="ok">Isolate host</span>, the best approved action':'Guard: the choice is approved, so it goes through',
-      '<span class="fin">Action taken: '+(bad?'Isolate host':'Kill process')+'.</span> Outcome sent to the learning layer'
-    ];
-  }
-  function show(i,txt){
-    for(var k=0;k<steps.length;k++){steps[k].classList.toggle('active',k===i); if(k<i) steps[k].classList.add('done');}
-    var li=document.createElement('li'); li.innerHTML='<b>0'+(i+1)+'</b><span>'+txt+'</span>'; log.appendChild(li);
-  }
-  function play(bad,instant){
-    var me=++run, L=lines(bad), i=0; log.innerHTML='';
-    for(var k=0;k<steps.length;k++){steps[k].classList.remove('active','done');}
-    (function next(){
-      if(me!==run) return;
-      show(i,L[i]); i++;
-      if(i<L.length){ if(instant){next();} else {setTimeout(next,850);} }
-    })();
-  }
-  document.getElementById('runOk').addEventListener('click',function(){play(false,noMotion);});
-  document.getElementById('runBad').addEventListener('click',function(){play(true,noMotion);});
-  play(true,true);
 
   // shrink big headings so they always fit on one line, whatever font loads
   function fit(){
